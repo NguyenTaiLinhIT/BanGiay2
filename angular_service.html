@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <div ng-controller="serviceCustomCtrl">
+        <input type="text" ng-model="number1">
+        <input type="text" ng-model="number1">
+        <button type="submit" ng-clink="sum()">Sum</button>
+        <p>{{total()}}</p>
+            
+    </div>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.factory("$add",function(number1,number2){
+            return function(a,b){
+               return parseFloat(a) + parseFloat(b);
+            }
+        });
+        app.controller("serviceCustomCtrl",function($scope,$add){
+            $scope.sum = function() {
+                $scope.total = $add($scope.number1,$scope.number2);
+            }
+            
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@page "/login"
+
+<head>
+    <link rel="stylesheet" href="/css/Login.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div class="wrapper">
+    <form>
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Username" required/>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Password" required />
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox" />Remember me</label>
+            <u href="#">Forgot password?</u>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="register-link">
+            <p>Don't have an acount?  <u>  Register</u></p>
+        </div>
+    </form>
+</div>
